@@ -9,17 +9,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120126171059) do
+ActiveRecord::Schema.define(:version => 20120126193716) do
 
   create_table "holidays", :force => true do |t|
     t.string   "name"
     t.date     "dateleaving"
     t.date     "datereturning"
-    t.string   "approved"
     t.string   "comments"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
+    t.boolean  "approved"
+    t.boolean  "declined"
   end
 
   create_table "users", :force => true do |t|

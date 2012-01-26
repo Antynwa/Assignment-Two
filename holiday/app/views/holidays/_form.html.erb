@@ -3,18 +3,21 @@
     <p> <%= f.label :Name %><br /> 
         <%= f.text_field :name %>
     </p>
-    <p> <%= f.label :"Date Leaving (YYYY/MM/DD)" %><br />
+    <p> <%= f.label :"Date-Leaving (YYYY/MM/DD)" %><br />
         <%= f.text_field :dateleaving %>
     </p>
- <p> <%= f.label :"Date Returning (YYYY/MM/DD)" %><br />
+ <p> <%= f.label :"Date-Returning (YYYY/MM/DD)" %><br />
         <%= f.text_field :datereturning %>
     </p>
 <% if current_user.admin == true %>
 <p> <%= f.label :"Approved?" %><br />
-        <%= f.text_field :approved %>
+        <%= f.check_box :approved %>
+    </p>
+<p> <%= f.label :"Declined?" %><br />
+        <%= f.check_box :declined %>
     </p>
 <p> <%= f.label :"Comments" %><br />
-        <%= f.text_field :comments %>
+        <%= f.text_area :comments %>
 <% end %>
     <p> <%= f.submit 'Save' %></p>
   <% end %>

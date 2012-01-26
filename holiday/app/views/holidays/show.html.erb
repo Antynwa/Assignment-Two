@@ -10,16 +10,17 @@
 </div>
 <div id="main">
 <h1>Holiday Requests</h1>
-<p><b>This Holiday Request was submitted by account <%=h @holiday.user.username %> </b> <p>
-<h3>Name</h3>
-<p><%=h @holiday.name %><p>
+<p><b>This Holiday Request was submitted by <%=h @holiday.name %> </b> <p>
 <h3>Date Leaving</h3>
 <p><%=h @holiday.dateleaving %><p>
 <h3>Date Returning</h3>
 <p><%=h @holiday.datereturning %><p>
 <h3>Date Submitted</h3>
+<p><%=h @holiday.created_at%><p>
 <h3>Approved</h3>
 <p><%=h @holiday.approved %><p>
+<h3>Declined?</h3>
+<p><%=h @holiday.declined %><p>
 <h3>Comments</h3>
 <p><%=h @holiday.comments %><p>
 <% if current_user.id == @holiday.user.id || current_user.admin == true %>

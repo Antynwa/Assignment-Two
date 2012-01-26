@@ -11,7 +11,7 @@
 </div>
 <div id="main">
   <h1>Holiday Requests</h1>
-  <p>The following table are the list of holiday requests submitted.</p>
+  <p>The following table is the full list of holiday requests submitted.</p>
   
 
 <table width="500" border="1" align="center">
@@ -22,7 +22,7 @@
       <th scope="col">Date Leaving</th>
       <th scope="col">Date Submitted</th>
       <th scope="col">Approved</th>
-      <th scope="col">Comments</th>
+      <th scope="col">Declined</th>
       <th scope="col">Date Updated</th>
 
       	
@@ -34,13 +34,14 @@
   <td><%=h holiday.dateleaving%></td>
   <td><%=h holiday.created_at%></td>
   <td><%=h holiday.approved%></td>
-  <td><%=h holiday.comments%></td>
+  <td><%=h holiday.declined%></td>
   <td><%=h holiday.updated_at%></td>
 
 
 </tr>
 <% end %>
 </table>
+<p> Click on the User Name to see the request in full</p>
 <%= link_to "Create a new Holiday", new_holiday_path 
 %>
 </div>
