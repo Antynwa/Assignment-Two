@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  dateleaving: 2012-01-19
+  datereturning: 2012-01-19
+  datesubmitted: 2012-01-19 17:05:27
+  dateapprej: 2012-01-19
+  approved: MyString
+  comments: MyString
+
+two:
+  name: MyString
+  dateleaving: 2012-01-19
+  datereturning: 2012-01-19
+  datesubmitted: 2012-01-19 17:05:27
+  dateapprej: 2012-01-19
+  approved: MyString
+  comments: MyString
