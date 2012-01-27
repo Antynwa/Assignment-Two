@@ -21,14 +21,14 @@ login_required
   end
 
   def update
-  @holiday = Holiday.find(params[:id])
+  	@holiday = Holiday.find(params[:id])
 if@holiday.save
-  @holiday.update_attributes(params[:holiday])
-   flash[:notice] = "Holiday updated!"
-    redirect_to @holiday
+  	@holiday.update_attributes(params[:holiday])
+   	flash[:notice] = "Holiday updated!"
+    	redirect_to @holiday
 else
-flash[:error] = "Was not Updated!!"
-  redirect_to :action => "edit_holiday_path"
+	flash[:error] = "Was not Updated!!"
+  	redirect_to :action => "edit_holiday_path"
 end
 
 end
@@ -36,13 +36,14 @@ end
   def create
     @holiday = Holiday.create(params[:holiday])
     @holiday.user_id = current_user.id
+
 if@holiday.save
-  @holiday.update_attributes(params[:holiday])
+  	@holiday.update_attributes(params[:holiday])
         flash[:notice] = " New Holiday Created!"
-     redirect_to @holiday
+     	redirect_to @holiday
     else
       render :action => 'new'
-flash[:error] = "Was not Created!!"
+	flash[:error] = "Was not Created!!"
 end
   end
 
