@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     if user
       session[:user_id] = user.id
       flash[:notice] = "Logged in successfully."
-       redirect_to holidays_path
+      redirect_to holidays_path
     else
       flash.now[:notice] = "Invalid login or password."
       render :action => 'new'

@@ -11,14 +11,13 @@
 </div>
 <div id="main">
   <h1>Holiday Requests</h1>
-  <p>The following table is the full list of holiday requests submitted.</p>
+  <p>The following table contains the list of holiday requests submitted. Please click on the name to view request in full</p>
   
 
 <table width="500" border="1" align="center">
     <tr id="table2">
 
-      <th height="26" scope="col"><p>Last Edited By</p></th>
-      <th height="26" scope="col"><p>Submitted By</p></th>
+      <th height="26" scope="col"><p>Username</p></th>
       <th scope="col">Date Leaving</th>
       <th scope="col">Date Submitted</th>
       <th scope="col">Approved</th>
@@ -27,10 +26,9 @@
 
       	
     </tr>
-<% for holiday in @holidays do %>
+<% @holiday.each do |holiday| %>
 <tr>
   <td><%= link_to holiday.user.username, holiday %></td>
-   <td><%=h holiday.name%></td>
   <td><%=h holiday.dateleaving%></td>
   <td><%=h holiday.created_at%></td>
   <td><%=h holiday.approved%></td>
@@ -41,7 +39,6 @@
 </tr>
 <% end %>
 </table>
-<p> Click on the User Name to see the request in full</p>
 <%= link_to "Create a new Holiday", new_holiday_path 
 %>
 </div>
