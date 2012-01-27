@@ -12,7 +12,10 @@
 <div id="main">
   <h1>Holiday Requests</h1>
 <h2> Welcome <%=h current_user.fname%> <%=h current_user.sname%></h2>
-  <p>The following table contains the list of holiday requests submitted. Please click on the name to view request in full</p>
+  <p>The following table contains the list of holiday requests submitted. Please click on the name to view request in full. Or Click 'New Holiday on the left hand side</p>
+<% if current_user.admin == true %>
+<p><i>You have admin rights, please click on the records to edit or approve</i></p>
+<% end %>
   
 
 <table width="500" border="1" align="center">
